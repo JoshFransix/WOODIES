@@ -1,0 +1,948 @@
+@media screen and (min-width: 1100px) {
+  .nav-toggle-label {
+    display: none;
+  }
+
+  nav {
+    transition: none;
+    transform: scale(1, 1);
+  }
+
+  nav a::before {
+    content: "";
+    transform: scale(0, 1);
+    transition: transform ease-in-out 250ms;
+  }
+
+  nav a:hover::before {
+    transform: scale(1, 1);
+  }
+}
+
+@media screen and (max-width: 1099px) {
+  .nav-toggle:checked ~ nav {
+    transform: scale(1, 1);
+  }
+
+  #header {
+    /* left: 80px; */
+    z-index: 1000;
+  }
+  nav {
+    position: fixed;
+    right: 0%;
+    background: #f9bdbd;
+    box-shadow: 0px 5px 20px rgba(0, 0, 0.3);
+    top: 0%;
+    height: 100%;
+    width: 100%;
+  }
+
+  nav ul {
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    top: 5%;
+    left: 0%;
+    text-align: center;
+    font-size: 120%;
+  }
+
+  nav ul li {
+    line-height: 5;
+    display: block;
+  }
+
+  nav ul li a {
+    padding: 1rem 10rem;
+  }
+}
+
+@media screen and (max-width: 1289px) {
+  .logo {
+    flex: 1;
+  }
+  nav {
+    flex: 2;
+  }
+
+  #showcase {
+    top: 30px;
+  }
+
+  #showcase .showcase-content .showcase-text h3 {
+    font-size: 160%;
+  }
+  #showcase .showcase-content .showcase-text h1 {
+    font-size: 380%;
+  }
+  #showcase .showcase-content .showcase-text a {
+    font-size: 90%;
+  }
+
+  #showcase .showcase-content .showcase-img img {
+    width: 100%;
+    height: 70vh;
+  }
+
+  #how,
+  #about-us,
+  #what,
+  #testimony {
+    width: 90%;
+  }
+
+  .about-us-header h1 {
+    flex: 1;
+    font-size: 360%;
+  }
+
+  .how-header h1 {
+    flex: 2;
+    font-size: 360%;
+  }
+  .what-header h1 {
+    font-size: 360%;
+  }
+
+  .how-container a {
+    width: 40%;
+  }
+}
+
+@media screen and (max-width: 1200px) {
+  /* .nav-toggle:checked ~ nav {
+    transform: scale(1, 1);
+  } */
+
+  #showcase .showcase-content .showcase-text {
+    width: 80%;
+  }
+
+  #showcase .showcase-content .showcase-text h3 {
+    font-size: 160%;
+    line-height: 190%;
+  }
+  #showcase .showcase-content .showcase-text h1 {
+    font-size: 280%;
+    line-height: 150%;
+  }
+  #showcase .showcase-content .showcase-text a {
+    width: 70%;
+    font-size: 90%;
+  }
+  #showcase .showcase-content .showcase-img img {
+    width: 100%;
+    height: 70vh;
+  }
+
+  .who-we-are h3 {
+    font-size: 200%;
+  }
+
+  .about-us-header h1 {
+    font-size: 260%;
+  }
+
+  #about-us {
+    height: 100vh;
+  }
+
+  #about-us .pot-section .pot-text h2 {
+    font-size: 200%;
+  }
+
+  #about-us .pot-section .pot-text h3 {
+    font-size: 130%;
+  }
+
+  #about-us .spoon-section img {
+    width: 120%;
+    height: 40vh;
+  }
+
+  #about-us .spoon-section .spoon-text h2 {
+    font-size: 200%;
+  }
+
+  #about-us .spoon-section .spoon-text h3 {
+    font-size: 130%;
+  }
+
+  #how {
+    height: 90vh;
+    width: 95%;
+  }
+
+  .how-to-custom {
+    flex: 1;
+  }
+
+  .how-to-custom h3 {
+    font-size: 200%;
+  }
+
+  .how-header h1 {
+    flex: 1;
+    font-size: 260%;
+    justify-content: flex-end;
+  }
+
+  .how-container .how-card-container {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-gap: 3rem 0rem;
+  }
+
+  #what {
+    height: 120vh;
+  }
+
+  .what-we-have h3 {
+    font-size: 200%;
+  }
+
+  .what-header h1 {
+    font-size: 260%;
+  }
+
+  .what-they-say h3 {
+    font-size: 200%;
+  }
+
+  .testimony-header h1 {
+    font-size: 260%;
+  }
+
+  #what .category {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  #testimony {
+    height: 70vh;
+  }
+}
+@media screen and (max-width: 830px) {
+  #showcase {
+    top: 120px;
+    width: 90%;
+  }
+
+  #showcase .showcase-content {
+    grid-template-columns: 60% 40%;
+  }
+
+  #showcase .showcase-content .showcase-text {
+    width: 90%;
+  }
+
+  #showcase .showcase-content .showcase-img img {
+    width: 100%;
+    height: 50vh;
+  }
+
+  .who-we-are h3 {
+    font-size: 150%;
+  }
+
+  .about-us-header h1 {
+    font-size: 230%;
+  }
+
+  /* .about-us .pot-section img {
+    height: 100vh;
+  } */
+
+  #about-us .pot-section .pot-text h2 {
+    font-size: 170%;
+  }
+
+  #about-us .pot-section .pot-text h3 {
+    font-size: 120%;
+  }
+
+  #about-us .spoon-section img {
+    width: 120%;
+    height: 40vh;
+  }
+
+  #about-us .spoon-section .spoon-text h2 {
+    font-size: 170%;
+  }
+
+  #about-us .spoon-section .spoon-text h3 {
+    font-size: 120%;
+  }
+
+  #how {
+    height: 120vh;
+    width: 95%;
+  }
+
+  .how-to-custom {
+    flex: 1;
+  }
+
+  .how-to-custom h3 {
+    font-size: 150%;
+  }
+
+  .how-header h1 {
+    flex: 1;
+    font-size: 230%;
+    justify-content: flex-end;
+  }
+
+  #what {
+    height: 100%;
+  }
+
+  .what-we-have h3 {
+    font-size: 150%;
+  }
+
+  .what-header h1 {
+    font-size: 230%;
+  }
+
+  .what-they-say h3 {
+    font-size: 150%;
+  }
+
+  .testimony-header h1 {
+    font-size: 230%;
+  }
+
+  .testimony-container .testimony-body {
+    grid-template-columns: repeat(1, 1fr);
+    width: 80%;
+  }
+}
+@media screen and (max-width: 620px) {
+  #header {
+    width: 70%;
+  }
+  .logo {
+    width: 20%;
+  }
+  #showcase {
+    top: 120px;
+    width: 90%;
+  }
+
+  #showcase .showcase-content {
+    grid-template-columns: 60% 40%;
+  }
+
+  #showcase .showcase-content .showcase-text {
+    width: 100%;
+  }
+
+  #showcase .showcase-content .showcase-img img {
+    width: 100%;
+    height: 40vh;
+  }
+  .who-we-are h3 {
+    font-size: 200%;
+  }
+
+  .about-us-header h1 {
+    font-size: 260%;
+  }
+
+  #about-us {
+    height: 130vh;
+  }
+
+  #about-us .pot-section .pot-text h2 {
+    font-size: 200%;
+  }
+
+  #about-us .pot-section .pot-text h3 {
+    font-size: 130%;
+  }
+
+  #about-us .spoon-section img {
+    width: 120%;
+    height: 40vh;
+  }
+
+  #about-us .spoon-section .spoon-text h2 {
+    font-size: 200%;
+  }
+
+  #about-us .spoon-section .spoon-text h3 {
+    font-size: 130%;
+  }
+
+  #how {
+    height: 120vh;
+    width: 95%;
+  }
+
+  .how-to-custom {
+    flex: 1;
+  }
+
+  .how-to-custom h3 {
+    font-size: 200%;
+  }
+
+  .how-header h1 {
+    flex: 1;
+    font-size: 260%;
+    justify-content: flex-end;
+  }
+
+  .how-container .how-card-container {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-gap: 3rem 0rem;
+  }
+
+  .what-we-have h3 {
+    font-size: 200%;
+  }
+
+  .what-header h1 {
+    font-size: 260%;
+  }
+
+  #what .category {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  /* #testimony {
+    height: 300vh;
+  } */
+
+  .what-they-say h3 {
+    font-size: 200%;
+  }
+
+  #subscribe {
+    margin-top: 14rem;
+  }
+
+  .testimony-header h1 {
+    flex: 1;
+    font-size: 260%;
+  }
+
+  .testimony-container .testimony-body {
+    grid-template-columns: repeat(1, 1fr);
+    width: 80%;
+  }
+
+  .testimony-container
+    .testimony-body
+    .testimony-card-container
+    .testimony-card {
+    width: 100%;
+  }
+
+  .testimony-container
+    .testimony-body
+    .testimony-card-container
+    .card-btn
+    a:nth-child(1) {
+    flex: 1.5;
+  }
+  .testimony-container
+    .testimony-body
+    .testimony-card-container
+    .card-btn
+    a:nth-child(2) {
+    flex: 0.3;
+  }
+}
+@media screen and (max-width: 830px) {
+  #showcase {
+    top: 120px;
+    width: 90%;
+  }
+
+  #showcase .showcase-content {
+    grid-template-columns: 60% 40%;
+  }
+
+  #showcase .showcase-content .showcase-text {
+    width: 90%;
+  }
+
+  #showcase .showcase-content .showcase-img img {
+    width: 100%;
+    height: 50vh;
+  }
+
+  #showcase .showcase-svg-1 {
+    top: 20%;
+    left: 20%;
+  }
+
+  .who-we-are h3 {
+    font-size: 150%;
+    flex: 2;
+  }
+
+  .about-us-header h1 {
+    font-size: 230%;
+    flex: 1.5;
+  }
+
+  /* .about-us .pot-section img {
+    height: 10px;
+  } */
+
+  #about-us .pot-section .pot-text h2 {
+    font-size: 150%;
+  }
+
+  #about-us .pot-section .pot-text h3 {
+    font-size: 100%;
+  }
+
+  #about-us .spoon-section img {
+    width: 120%;
+    height: 40vh;
+  }
+
+  #about-us .spoon-section .spoon-text h2 {
+    font-size: 150%;
+  }
+
+  #about-us .spoon-section .spoon-text h3 {
+    font-size: 100%;
+  }
+
+  #how {
+    height: 120vh;
+    width: 95%;
+  }
+
+  .how-to-custom h3 {
+    font-size: 130%;
+  }
+
+  .how-header h1 {
+    flex: 1;
+    font-size: 210%;
+    justify-content: flex-end;
+  }
+
+  .how-container .how-card-container {
+    grid-template-columns: repeat(2, 1fr);
+    grid-gap: 3rem 0rem;
+  }
+
+  .what-we-have h3 {
+    font-size: 130%;
+  }
+
+  .what-header h1 {
+    font-size: 210%;
+  }
+
+  .what-they-say h3 {
+    font-size: 130%;
+  }
+
+  .testimony-header h1 {
+    font-size: 210%;
+  }
+
+  #what .category {
+    grid-template-columns: 100%;
+    margin: auto;
+    width: 60%;
+  }
+
+  #what .category img {
+    height: 80%;
+    width: 80%;
+  }
+
+  #what .category a {
+    margin-left: 5rem;
+  }
+
+  /* #subscribe {
+    height: 60vh;
+  } */
+
+  .subscribe-container .subscribe-content {
+    grid-template-columns: repeat(1, 1fr);
+    grid-gap: 2rem 0rem;
+    width: 80%;
+  }
+
+  #footer {
+    width: 90%;
+  }
+
+  .footer-content {
+    grid-gap: 0rem 2rem;
+  }
+}
+
+@media screen and (max-width: 699px) {
+  #footer {
+    width: 95%;
+  }
+
+  .footer-content {
+    grid-gap: 0rem 1rem;
+  }
+}
+
+@media screen and (max-width: 669px) {
+  #footer {
+    width: 80%;
+  }
+
+  .footer-content {
+    grid-template-columns: 100%;
+    grid-gap: 2rem 1rem;
+  }
+}
+
+@media screen and (max-width: 560px) {
+  .nav-toggle-label {
+    right: -20%;
+  }
+  nav ul li a {
+    padding: 1rem 5rem;
+  }
+
+  #showcase {
+    top: 150px;
+    height: 100vh;
+    width: 80%;
+  }
+
+  #showcase .showcase-content {
+    grid-template-columns: 100%;
+    text-align: center;
+  }
+
+  #showcase .showcase-content .showcase-text {
+    width: 100%;
+  }
+  #showcase .showcase-content .showcase-text h1 {
+    margin: 2rem 0;
+  }
+
+  #showcase .showcase-content .showcase-text a {
+    margin: auto;
+    width: 80%;
+    font-size: 100%;
+  }
+
+  #showcase .showcase-content .showcase-img img {
+    display: none;
+  }
+
+  .who-we-are h3 {
+    font-size: 130%;
+  }
+
+  .about-us-header h1 {
+    font-size: 210%;
+  }
+
+  /* #about-us .pot-section::before {
+    position: relative;
+    top: 0%;
+    left: 0;
+    width: 0%;
+    height: 0%;
+  } */
+
+  #about-us .pot-section img {
+    height: 20vh;
+  }
+
+  #about-us .pot-section .pot-text h2 {
+    font-size: 130%;
+  }
+
+  #about-us .pot-section .pot-text h3 {
+    font-size: 100%;
+  }
+
+  #about-us .spoon-section img {
+    width: 120%;
+    height: 40vh;
+  }
+
+  #about-us .spoon-section .spoon-text h2 {
+    font-size: 130%;
+  }
+
+  #about-us .spoon-section .spoon-text h3 {
+    font-size: 100%;
+  }
+
+  #how {
+    height: 180vh;
+    width: 95%;
+  }
+
+  .how-to-custom h3 {
+    font-size: 120%;
+  }
+
+  .how-header h1 {
+    flex: 1;
+    font-size: 190%;
+  }
+
+  .how-container .how-card-container {
+    grid-template-columns: repeat(1, 1fr);
+    grid-gap: 3rem 0rem;
+    margin: auto;
+    width: 80%;
+  }
+
+  #how a {
+    width: 60%;
+  }
+
+  .what-we-have h3 {
+    font-size: 130%;
+  }
+
+  .what-header h1 {
+    font-size: 210%;
+  }
+
+  #what .category {
+    width: 100%;
+  }
+
+  .what-they-say h3 {
+    font-size: 130%;
+  }
+
+  .testimony-header h1 {
+    font-size: 210%;
+  }
+}
+@media screen and (max-width: 420px) {
+  #showcase {
+    top: 150px;
+    height: 100vh;
+    width: 80%;
+  }
+
+  #showcase .showcase-content {
+    grid-template-columns: 100%;
+    text-align: center;
+  }
+
+  #showcase .showcase-content .showcase-text {
+    width: 100%;
+  }
+  #showcase .showcase-content .showcase-text h1 {
+    margin: 2rem 0;
+  }
+
+  #showcase .showcase-content .showcase-text a {
+    margin: auto;
+    width: 80%;
+    font-size: 100%;
+  }
+
+  #showcase .showcase-content .showcase-img img {
+    display: none;
+  }
+
+  .who-we-are h3 {
+    font-size: 130%;
+  }
+
+  #about-us {
+    height: 90vh;
+  }
+
+  .about-us-header h1 {
+    font-size: 210%;
+    display: none;
+  }
+
+  /* #about-us .pot-section::before {
+    position: relative;
+    top: 0%;
+    left: 0;
+    width: 0%;
+    height: 0%;
+  } */
+
+  #about-us .pot-section {
+    grid-template-columns: 100%;
+  }
+
+  #about-us .pot-section img {
+    height: 20vh;
+    display: none;
+  }
+
+  #about-us .pot-section .pot-text h2 {
+    font-size: 150%;
+  }
+
+  #about-us .pot-section .pot-text h3 {
+    width: 80%;
+    font-size: 100%;
+  }
+
+  #about-us .spoon-section {
+    grid-template-columns: 60% 40%;
+  }
+
+  #about-us .spoon-section img {
+    width: 70%;
+    height: 40vh;
+    /* display: none; */
+  }
+
+  #about-us .spoon-section .spoon-text h2 {
+    font-size: 130%;
+  }
+
+  #about-us .spoon-section .spoon-text h3 {
+    font-size: 100%;
+  }
+
+  #how {
+    height: 180vh;
+    width: 95%;
+  }
+
+  .how-to-custom h3 {
+    font-size: 120%;
+  }
+
+  .how-header h1 {
+    display: none;
+  }
+
+  .how-container .how-card-container {
+    grid-template-columns: repeat(1, 1fr);
+    grid-gap: 3rem 0rem;
+    margin: auto;
+    width: 80%;
+  }
+
+  #how a {
+    width: 70%;
+    margin-left: 2rem;
+  }
+
+  /* #what {
+    height: 100vh;
+  } */
+
+  .what-we-have h3 {
+    font-size: 130%;
+  }
+
+  .what-header h1 {
+    font-size: 210%;
+    display: none;
+  }
+
+  #what .category {
+    width: 100%;
+  }
+
+  .what-they-say h3 {
+    font-size: 130%;
+  }
+
+  .testimony-header h1 {
+    display: none;
+  }
+
+  .testimony-container
+    .testimony-body
+    .testimony-card-container
+    .card-btn
+    a:nth-child(1) {
+    flex: 1;
+  }
+  .testimony-container
+    .testimony-body
+    .testimony-card-container
+    .card-btn
+    a:nth-child(2) {
+    flex: 0.3;
+  }
+}
+
+@media screen and (max-width: 390px) {
+  #showcase {
+    top: 50px;
+    height: 100vh;
+  }
+
+  #about-us {
+    height: 100vh;
+  }
+
+  #how {
+    height: 170vh;
+  }
+
+  #testimony {
+    height: 90vh;
+  }
+
+  .subscribe-container .subscribe-content {
+    width: 100%;
+  }
+}
+@media screen and (max-width: 370px) {
+  #showcase {
+    top: 50px;
+    height: 100vh;
+  }
+
+  #about-us {
+    height: 130vh;
+  }
+
+  #how {
+    height: 200vh;
+  }
+
+  #testimony {
+    height: 90vh;
+  }
+
+  .subscribe-container .subscribe-content {
+    width: 100%;
+  }
+}
+@media screen and (max-width: 340px) {
+  #showcase {
+    top: 50px;
+    height: 100vh;
+  }
+
+  #about-us {
+    height: 160vh;
+  }
+
+  #how {
+    height: 225vh;
+  }
+
+  #testimony {
+    height: 130vh;
+  }
+
+  .subscribe-container .subscribe-content {
+    width: 100%;
+  }
+}
