@@ -9,26 +9,31 @@
       integrity="sha384-HzLeBuhoNPvSl5KYnjx0BT+WB0QEEqLprO+NBkkk5gbc67FTaL7XIGa2w1L0Xbgc"
       crossorigin="anonymous"
     />
-    <link rel="stylesheet" href="css/style.css" />
-    <link rel="stylesheet" href="./css/responsive.css" />
+    <link rel="stylesheet" href="./css/style.css">
     <title>Woodies | Get your affordable home appliances</title>
   </head>
   <body>
     <div class="bg-1"></div>
+    <div class="container">
     <header id="header">
       <a class="logo" href="#"><img src="./img/logo.png" alt="logo" /></a>
-      <input type="checkbox" id="nav-toggle" class="nav-toggle" />
+      <!-- <input type="checkbox" id="nav-toggle" class="nav-toggle" /> -->
       <nav>
+        <div class="hamburger">
+          <div class="line line1"></div>
+          <div class="line line2"></div>
+          <div class="line line3"></div>
+        </div>
         <ul class="nav-links">
-          <li><a class="active" href="#">Home</a></li>
-          <li><a href="#">About Us</a></li>
-          <li><a href="#">How it Works</a></li>
-          <li><a href="#">Categories</a></li>
-          <li><a href="#">Testimony</a></li>
-          <li><a class="btn-light" href="#">Sign Up</a></li>
+          <li class="nav-item"><a class="active" href="#">Home</a></li>
+          <li class="nav-item"><a href="#about-us">About Us</a></li>
+          <li class="nav-item"><a href="#how">How it Works</a></li>
+          <li class="nav-item"><a href="#what">Categories</a></li>
+          <li class="nav-item"><a href="#testimony">Testimony</a></li>
+          <li class="nav-item"><a class="btn-light" href="#">Sign Up</a></li>
         </ul>
       </nav>
-      <label for="nav-toggle" class="nav-toggle-label">
+      <!-- <label for="nav-toggle" class="nav-toggle-label">
         <svg class="hamburger" viewBox="0 0 100 100">
           <line
             class="line-one"
@@ -64,9 +69,9 @@
             stroke-width="4"
           />
         </svg>
-      </label>
+      </label> -->
     </header>
-
+  </div>
     <section id="showcase">
       <div class="showcase-container">
         <div class="showcase-content">
@@ -75,7 +80,7 @@
               Are you looking for <span> wooden furniture </span>for your place?
             </h3>
             <h1>This is the Right Place</h1>
-            <a href="#">Explore Furniture</a>
+            <a class="btn-dark" href="#">Explore Furniture</a>
           </div>
           <div class="showcase-img">
             <img src="./img/showcase_table.png" alt="showcase-table" />
@@ -146,7 +151,7 @@
               <img src="./img/carpenter.png" alt="Production" />
             </div>
           </div>
-          <a href="#">Get Personalized Now</a>
+          <a class="btn-dark" href="#">Get Personalized Now</a>
         </div>
       </div>
     </section>

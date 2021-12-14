@@ -1,61 +1,105 @@
-@media screen and (min-width: 1100px) {
-  .nav-toggle-label {
-    display: none;
-  }
-
-  nav {
-    transition: none;
-    transform: scale(1, 1);
-  }
-
-  nav a::before {
-    content: "";
-    transform: scale(0, 1);
-    transition: transform ease-in-out 250ms;
-  }
-
-  nav a:hover::before {
-    transform: scale(1, 1);
-  }
-}
-
 @media screen and (max-width: 1099px) {
-  .nav-toggle:checked ~ nav {
-    transform: scale(1, 1);
+  #header {
+    padding-left: 2rem;
   }
 
-  #header {
-    /* left: 80px; */
-    z-index: 1000;
+  .line {
+    width: 25px;
+    height: 3px;
+    background: #fff;
+    margin: 5px;
   }
+
   nav {
-    position: fixed;
-    right: 0%;
+    position: absolute;
+    // right: 0%;
     background: #f9bdbd;
-    box-shadow: 0px 5px 20px rgba(0, 0, 0.3);
+    // box-shadow: 0px 5px 20px rgba(0, 0, 0, 0.3);
+    // top: 0%;
+    // height: 100%;
+    // width: 100%;
+  }
+
+  .hamburger {
+    position: fixed;
+    cursor: pointer;
+    background: #daa520;
+    padding: 0.2rem;
+    border-radius: 5px;
+    right: 5%;
+    top: 5%;
+    transform: translate(-5%, -50%);
+    z-index: 2000;
+  }
+
+  // .hamburger.hamburger-open {
+  //   position: fixed;
+  //   top: 5%;
+  //   right: 3.2%;
+  // }
+
+  .nav-links {
+    // display: flex;
+    flex-direction: column;
+    position: fixed;
     top: 0%;
+    left: 0%;
+    background: #f9bdbd;
     height: 100%;
+    width: 100%;
+    text-align: center;
+    font-size: 100%;
+    -webkit-clip-path: circle(100px at 120% -15%);
+    transition: all 1s ease-out;
+    pointer-events: none;
+    z-index: 200;
+  }
+
+  .nav-links.open {
+    clip-path: circle(1400px at 90% -10%);
+    -webkit-clip-path: circle(1400px at 90% -1%);
+    pointer-events: all;
+  }
+
+  .nav-links li {
+    // line-height: 5;
+    // display: block;
+    opacity: 0;
+  }
+
+  .nav-links li a {
+    text-align: center;
+    margin: auto;
+    // display: block;
+    font-size: 25px;
     width: 100%;
   }
 
-  nav ul {
-    display: flex;
-    flex-direction: column;
-    position: relative;
-    top: 5%;
-    left: 0%;
-    text-align: center;
-    font-size: 120%;
+  .nav-links li:nth-child(1) {
+    transition: all 0.5s ease 0.2s;
+  }
+  .nav-links li:nth-child(2) {
+    transition: all 0.5s ease 0.4s;
+  }
+  .nav-links li:nth-child(3) {
+    transition: all 0.5s ease 0.6s;
+  }
+  .nav-links li:nth-child(4) {
+    transition: all 0.5s ease 0.8s;
+  }
+  .nav-links li:nth-child(5) {
+    transition: all 0.5s ease 1s;
+  }
+  .nav-links li:nth-child(6) {
+    transition: all 0.5s ease 1.2s;
+  }
+  li.fade {
+    opacity: 1;
   }
 
-  nav ul li {
-    line-height: 5;
-    display: block;
-  }
-
-  nav ul li a {
-    padding: 1rem 10rem;
-  }
+  // nav ul li a {
+  //   padding: 1rem 10rem;
+  // }
 }
 
 @media screen and (max-width: 1289px) {
@@ -67,6 +111,7 @@
   }
 
   #showcase {
+    // display: none;
     top: 30px;
   }
 
@@ -82,7 +127,7 @@
 
   #showcase .showcase-content .showcase-img img {
     width: 100%;
-    height: 70vh;
+    height: 110%;
   }
 
   #how,
@@ -114,7 +159,17 @@
   /* .nav-toggle:checked ~ nav {
     transform: scale(1, 1);
   } */
-
+  #about-us,
+  #how,
+  #what,
+  #testimony {
+    margin-bottom: 11rem;
+  }
+  #showcase {
+    top: 100px;
+    margin-bottom: 3rem;
+    height: 100vh;
+  }
   #showcase .showcase-content .showcase-text {
     width: 80%;
   }
@@ -133,7 +188,7 @@
   }
   #showcase .showcase-content .showcase-img img {
     width: 100%;
-    height: 70vh;
+    // height: 100%;
   }
 
   .who-we-are h3 {
@@ -142,10 +197,6 @@
 
   .about-us-header h1 {
     font-size: 260%;
-  }
-
-  #about-us {
-    height: 100vh;
   }
 
   #about-us .pot-section .pot-text h2 {
@@ -158,7 +209,7 @@
 
   #about-us .spoon-section img {
     width: 120%;
-    height: 40vh;
+    height: 100%;
   }
 
   #about-us .spoon-section .spoon-text h2 {
@@ -170,7 +221,7 @@
   }
 
   #how {
-    height: 90vh;
+    // height: 90vh;
     width: 95%;
   }
 
@@ -194,10 +245,6 @@
     grid-gap: 3rem 0rem;
   }
 
-  #what {
-    height: 120vh;
-  }
-
   .what-we-have h3 {
     font-size: 200%;
   }
@@ -214,14 +261,27 @@
     font-size: 260%;
   }
 
+  .testimony-container .testimony-body {
+    grid-template-columns: repeat(2, 1fr);
+    width: 90%;
+    // display: none;
+  }
+
+  .testimony-container .testimony-body > img {
+    height: 300px;
+    width: 300px;
+    // height: 200px;
+  }
+
+  .testimony-container .testimony-body > img:nth-child(2) {
+    display: none;
+  }
+
   #what .category {
     grid-template-columns: repeat(2, 1fr);
   }
-
-  #testimony {
-    height: 70vh;
-  }
 }
+
 @media screen and (max-width: 830px) {
   #showcase {
     top: 120px;
@@ -238,90 +298,227 @@
 
   #showcase .showcase-content .showcase-img img {
     width: 100%;
-    height: 50vh;
+    // height: 50vh;
+  }
+
+  #showcase .showcase-svg-1 {
+    top: 20%;
+    left: 20%;
   }
 
   .who-we-are h3 {
     font-size: 150%;
+    flex: 2;
   }
 
+  // #about-us {
+  //   margin-bottom: 0;
+  // }
   .about-us-header h1 {
     font-size: 230%;
+    flex: 1.5;
   }
 
   /* .about-us .pot-section img {
-    height: 100vh;
+    height: 10px;
   } */
 
   #about-us .pot-section .pot-text h2 {
-    font-size: 170%;
+    font-size: 150%;
   }
 
   #about-us .pot-section .pot-text h3 {
-    font-size: 120%;
+    font-size: 100%;
   }
 
-  #about-us .spoon-section img {
-    width: 120%;
-    height: 40vh;
+  #about-us .spoon-section {
+    margin-bottom: 0;
+    img {
+      width: 120%;
+      height: 100%;
+    }
   }
-
   #about-us .spoon-section .spoon-text h2 {
-    font-size: 170%;
+    font-size: 150%;
   }
 
   #about-us .spoon-section .spoon-text h3 {
-    font-size: 120%;
+    font-size: 100%;
   }
 
   #how {
-    height: 120vh;
-    width: 95%;
-  }
+    // height: 10vh;
 
-  .how-to-custom {
-    flex: 1;
+    margin-top: 0rem;
+    width: 95%;
+
+    .btn-dark {
+      width: 60%;
+    }
   }
 
   .how-to-custom h3 {
-    font-size: 150%;
+    font-size: 130%;
   }
 
   .how-header h1 {
     flex: 1;
-    font-size: 230%;
+    font-size: 210%;
     justify-content: flex-end;
   }
 
-  #what {
-    height: 100%;
+  .how-container .how-card-container {
+    grid-template-columns: repeat(2, 1fr);
+    grid-gap: 2rem 0rem;
   }
 
   .what-we-have h3 {
-    font-size: 150%;
+    font-size: 130%;
   }
 
   .what-header h1 {
-    font-size: 230%;
+    font-size: 210%;
   }
 
   .what-they-say h3 {
-    font-size: 150%;
+    font-size: 130%;
   }
 
   .testimony-header h1 {
-    font-size: 230%;
+    font-size: 210%;
   }
 
-  .testimony-container .testimony-body {
-    grid-template-columns: repeat(1, 1fr);
+  #what .category {
+    // grid-template-columns: 10%;
+    margin: auto;
+    width: 90%;
+  }
+
+  #what .category img {
+    height: 80%;
     width: 80%;
   }
-}
-@media screen and (max-width: 620px) {
-  #header {
-    width: 70%;
+
+  #what .category a {
+    margin-left: 5rem;
+    width: 60%;
   }
+
+  .testimony-container
+    .testimony-body
+    .testimony-card-container
+    .testimony-card {
+    width: 100%;
+    transition: all 0.3s ease-in-out;
+  }
+
+  .testimony-container
+    .testimony-body
+    .testimony-card-container
+    .card-btn
+    a:nth-child(1) {
+    flex: 1.5;
+  }
+  .testimony-container
+    .testimony-body
+    .testimony-card-container
+    .card-btn
+    a:nth-child(2) {
+    flex: 0.3;
+  }
+
+  /* #subscribe {
+    height: 60vh;
+  } */
+
+  .subscribe-container .subscribe-content {
+    margin: auto;
+    grid-template-columns: repeat(1, 1fr);
+    grid-gap: 2rem 0rem;
+    width: 85%;
+  }
+
+  .subscribe-content .subscribe-form input {
+    width: 100%;
+  }
+
+  #footer {
+    width: 90%;
+  }
+
+  .footer-content {
+    grid-gap: 0rem 2rem;
+  }
+}
+
+@media screen and (max-width: 699px) {
+  #showcase .showcase-img {
+    width: 100%;
+    height: 70%;
+  }
+  #about-us,
+  #how,
+  #what,
+  #testimony {
+    margin-bottom: 9rem;
+  }
+
+  #footer {
+    width: 95%;
+  }
+
+  .footer-content {
+    grid-gap: 0rem 1rem;
+  }
+}
+
+@media screen and (max-width: 669px) {
+  .testimony-container .testimony-body {
+    grid-template-columns: 100%;
+    width: 80%;
+  }
+
+  .testimony-container .testimony-body > img {
+    display: none;
+  }
+
+  .testimony-container .testimony-body .testimony-card {
+    width: 100%;
+  }
+
+  .testimony-container
+    .testimony-body
+    .testimony-card-container
+    .card-btn
+    a:nth-child(1) {
+    flex: 3.5;
+    justify-self: flex-start;
+  }
+  .testimony-container
+    .testimony-body
+    .testimony-card-container
+    .card-btn
+    a:nth-child(2) {
+    justify-self: flex-end;
+    flex: 0.1;
+  }
+
+  #subscribe {
+    width: 100%;
+    margin-bottom: 9rem;
+  }
+
+  #footer {
+    width: 80%;
+  }
+
+  .footer-content {
+    grid-template-columns: 100%;
+    grid-gap: 2rem 1rem;
+  }
+}
+
+@media screen and (max-width: 620px) {
   .logo {
     width: 20%;
   }
@@ -339,8 +536,16 @@
   }
 
   #showcase .showcase-content .showcase-img img {
+    // display: none;
     width: 100%;
-    height: 40vh;
+    // height: 40vh;
+  }
+
+  #about-us,
+  #how,
+  #what,
+  #testimony {
+    margin-bottom: 12rem;
   }
   .who-we-are h3 {
     font-size: 200%;
@@ -348,10 +553,6 @@
 
   .about-us-header h1 {
     font-size: 260%;
-  }
-
-  #about-us {
-    height: 130vh;
   }
 
   #about-us .pot-section .pot-text h2 {
@@ -364,7 +565,7 @@
 
   #about-us .spoon-section img {
     width: 120%;
-    height: 40vh;
+    // height: 40vh;
   }
 
   #about-us .spoon-section .spoon-text h2 {
@@ -376,7 +577,6 @@
   }
 
   #how {
-    height: 120vh;
     width: 95%;
   }
 
@@ -412,16 +612,16 @@
     grid-template-columns: repeat(2, 1fr);
   }
 
-  /* #testimony {
-    height: 300vh;
-  } */
+  #testimony {
+    height: 100%;
+  }
 
   .what-they-say h3 {
     font-size: 200%;
   }
 
-  #subscribe {
-    margin-top: 14rem;
+  .testimony-container .testimony-header {
+    margin-bottom: 3rem;
   }
 
   .testimony-header h1 {
@@ -430,7 +630,6 @@
   }
 
   .testimony-container .testimony-body {
-    grid-template-columns: repeat(1, 1fr);
     width: 80%;
   }
 
@@ -441,175 +640,16 @@
     width: 100%;
   }
 
-  .testimony-container
-    .testimony-body
-    .testimony-card-container
-    .card-btn
-    a:nth-child(1) {
-    flex: 1.5;
-  }
-  .testimony-container
-    .testimony-body
-    .testimony-card-container
-    .card-btn
-    a:nth-child(2) {
-    flex: 0.3;
-  }
-}
-@media screen and (max-width: 830px) {
-  #showcase {
-    top: 120px;
-    width: 90%;
-  }
-
-  #showcase .showcase-content {
-    grid-template-columns: 60% 40%;
-  }
-
-  #showcase .showcase-content .showcase-text {
-    width: 90%;
-  }
-
-  #showcase .showcase-content .showcase-img img {
-    width: 100%;
-    height: 50vh;
-  }
-
-  #showcase .showcase-svg-1 {
-    top: 20%;
-    left: 20%;
-  }
-
-  .who-we-are h3 {
-    font-size: 150%;
-    flex: 2;
-  }
-
-  .about-us-header h1 {
-    font-size: 230%;
-    flex: 1.5;
-  }
-
-  /* .about-us .pot-section img {
-    height: 10px;
-  } */
-
-  #about-us .pot-section .pot-text h2 {
-    font-size: 150%;
-  }
-
-  #about-us .pot-section .pot-text h3 {
-    font-size: 100%;
-  }
-
-  #about-us .spoon-section img {
-    width: 120%;
-    height: 40vh;
-  }
-
-  #about-us .spoon-section .spoon-text h2 {
-    font-size: 150%;
-  }
-
-  #about-us .spoon-section .spoon-text h3 {
-    font-size: 100%;
-  }
-
-  #how {
-    height: 120vh;
-    width: 95%;
-  }
-
-  .how-to-custom h3 {
-    font-size: 130%;
-  }
-
-  .how-header h1 {
-    flex: 1;
-    font-size: 210%;
-    justify-content: flex-end;
-  }
-
-  .how-container .how-card-container {
-    grid-template-columns: repeat(2, 1fr);
-    grid-gap: 3rem 0rem;
-  }
-
-  .what-we-have h3 {
-    font-size: 130%;
-  }
-
-  .what-header h1 {
-    font-size: 210%;
-  }
-
-  .what-they-say h3 {
-    font-size: 130%;
-  }
-
-  .testimony-header h1 {
-    font-size: 210%;
-  }
-
-  #what .category {
-    grid-template-columns: 100%;
-    margin: auto;
-    width: 60%;
-  }
-
-  #what .category img {
-    height: 80%;
-    width: 80%;
-  }
-
-  #what .category a {
-    margin-left: 5rem;
-  }
-
-  /* #subscribe {
-    height: 60vh;
-  } */
-
-  .subscribe-container .subscribe-content {
-    grid-template-columns: repeat(1, 1fr);
-    grid-gap: 2rem 0rem;
-    width: 80%;
-  }
-
-  #footer {
-    width: 90%;
-  }
-
-  .footer-content {
-    grid-gap: 0rem 2rem;
-  }
-}
-
-@media screen and (max-width: 699px) {
-  #footer {
-    width: 95%;
-  }
-
-  .footer-content {
-    grid-gap: 0rem 1rem;
-  }
-}
-
-@media screen and (max-width: 669px) {
-  #footer {
-    width: 80%;
-  }
-
-  .footer-content {
-    grid-template-columns: 100%;
-    grid-gap: 2rem 1rem;
+  .subscribe-content {
+    font-size: 90%;
   }
 }
 
 @media screen and (max-width: 560px) {
-  .nav-toggle-label {
-    right: -20%;
-  }
+  // .hamburger {
+  //   right: 13%;
+  // }
+
   nav ul li a {
     padding: 1rem 5rem;
   }
@@ -658,10 +698,6 @@
     height: 0%;
   } */
 
-  #about-us .pot-section img {
-    height: 20vh;
-  }
-
   #about-us .pot-section .pot-text h2 {
     font-size: 130%;
   }
@@ -672,7 +708,7 @@
 
   #about-us .spoon-section img {
     width: 120%;
-    height: 40vh;
+    // height: 40vh;
   }
 
   #about-us .spoon-section .spoon-text h2 {
@@ -684,7 +720,7 @@
   }
 
   #how {
-    height: 180vh;
+    // height: 180vh;
     width: 95%;
   }
 
@@ -694,7 +730,7 @@
 
   .how-header h1 {
     flex: 1;
-    font-size: 190%;
+    font-size: 170%;
   }
 
   .how-container .how-card-container {
@@ -705,7 +741,7 @@
   }
 
   #how a {
-    width: 60%;
+    width: 70%;
   }
 
   .what-we-have h3 {
@@ -718,6 +754,11 @@
 
   #what .category {
     width: 100%;
+
+    a {
+      width: 100%;
+      margin-left: 0;
+    }
   }
 
   .what-they-say h3 {
@@ -730,7 +771,7 @@
 }
 @media screen and (max-width: 420px) {
   #showcase {
-    top: 150px;
+    top: 200px;
     height: 100vh;
     width: 80%;
   }
@@ -744,13 +785,20 @@
     width: 100%;
   }
   #showcase .showcase-content .showcase-text h1 {
+    font-size: 150%;
+    margin: 2rem 0;
+    width: 100%;
+  }
+  #showcase .showcase-content .showcase-text h3 {
+    font-size: 130%;
+    width: 100%;
     margin: 2rem 0;
   }
 
   #showcase .showcase-content .showcase-text a {
     margin: auto;
-    width: 80%;
-    font-size: 100%;
+    width: 100%;
+    font-size: 90%;
   }
 
   #showcase .showcase-content .showcase-img img {
@@ -761,8 +809,10 @@
     font-size: 130%;
   }
 
-  #about-us {
-    height: 90vh;
+  #about-us,
+  #how,
+  #what {
+    margin-bottom: 7rem;
   }
 
   .about-us-header h1 {
@@ -783,7 +833,6 @@
   }
 
   #about-us .pot-section img {
-    height: 20vh;
     display: none;
   }
 
@@ -797,13 +846,11 @@
   }
 
   #about-us .spoon-section {
-    grid-template-columns: 60% 40%;
+    grid-template-columns: 100%;
   }
 
   #about-us .spoon-section img {
-    width: 70%;
-    height: 40vh;
-    /* display: none; */
+    display: none;
   }
 
   #about-us .spoon-section .spoon-text h2 {
@@ -815,8 +862,12 @@
   }
 
   #how {
-    height: 180vh;
     width: 95%;
+
+    .btn-dark {
+      width: 80%;
+      font-size: 90%;
+    }
   }
 
   .how-to-custom h3 {
@@ -828,32 +879,28 @@
   }
 
   .how-container .how-card-container {
-    grid-template-columns: repeat(1, 1fr);
-    grid-gap: 3rem 0rem;
+    // overflow-x: hidden;
+    grid-template-columns: repeat(2, 1fr);
+    // grid-gap: 3rem 0rem;
     margin: auto;
-    width: 80%;
+    width: 90%;
   }
 
-  #how a {
-    width: 70%;
-    margin-left: 2rem;
+  .how-container .how-card-container .card img {
+    width: 100%;
   }
-
-  /* #what {
-    height: 100vh;
-  } */
 
   .what-we-have h3 {
     font-size: 130%;
   }
 
   .what-header h1 {
-    font-size: 210%;
     display: none;
   }
 
   #what .category {
     width: 100%;
+    grid-gap: 2rem;
   }
 
   .what-they-say h3 {
@@ -864,85 +911,58 @@
     display: none;
   }
 
+  .testimony-container .testimony-body {
+    width: 90%;
+  }
+
   .testimony-container
     .testimony-body
     .testimony-card-container
-    .card-btn
-    a:nth-child(1) {
-    flex: 1;
-  }
-  .testimony-container
-    .testimony-body
-    .testimony-card-container
-    .card-btn
-    a:nth-child(2) {
-    flex: 0.3;
-  }
-}
-
-@media screen and (max-width: 390px) {
-  #showcase {
-    top: 50px;
-    height: 100vh;
-  }
-
-  #about-us {
-    height: 100vh;
-  }
-
-  #how {
-    height: 170vh;
-  }
-
-  #testimony {
-    height: 90vh;
-  }
-
-  .subscribe-container .subscribe-content {
+    .testimony-card {
     width: 100%;
+    padding: 2rem;
   }
 }
+
 @media screen and (max-width: 370px) {
   #showcase {
-    top: 50px;
+    top: 100px;
     height: 100vh;
   }
 
-  #about-us {
-    height: 130vh;
+  #testimony {
+    margin-bottom: 8rem;
+
+    .testimony-card {
+      h3 {
+        font-size: 70%;
+        margin: 0rem;
+      }
+    }
   }
 
   #how {
-    height: 200vh;
-  }
-
-  #testimony {
-    height: 90vh;
+    .btn-dark {
+      width: 90%;
+    }
   }
 
   .subscribe-container .subscribe-content {
-    width: 100%;
+    width: 90%;
   }
 }
 @media screen and (max-width: 340px) {
-  #showcase {
-    top: 50px;
-    height: 100vh;
+  #header {
+    padding-left: 1rem;
   }
 
-  #about-us {
-    height: 160vh;
-  }
-
-  #how {
-    height: 225vh;
-  }
-
-  #testimony {
-    height: 130vh;
-  }
-
-  .subscribe-container .subscribe-content {
+  .logo {
     width: 100%;
+    height: 40%;
+  }
+
+  #showcase {
+    top: 100px;
+    height: 100vh;
   }
 }

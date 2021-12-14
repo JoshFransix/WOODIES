@@ -1,0 +1,63 @@
+@import url("https://fonts.googleapis.com/css2?family=Nunito&family=Poppins&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  text-decoration: none;
+  list-style: none;
+  // overflow-x: hidden;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: "Poppins", sans-serif;
+  overflow-x: hidden !important;
+  width: 100vw;
+  background: #eee;
+}
+
+html,
+body {
+  overflow-x: hidden;
+}
+
+body.lock-scroll {
+  height: 100vh;
+}
+
+img {
+  user-select: none;
+  pointer-events: none;
+}
+.btn-light {
+  padding: 0.5rem 2.5rem;
+  border: 1px solid #3e3f43;
+  border-radius: 8px;
+}
+
+.btn-light:hover {
+  background: #3e3f43;
+  color: #fff;
+}
+
+.btn-dark {
+  padding: 1rem 2rem;
+  background: #daa520;
+  color: #fff;
+  border: 1px solid transparent;
+  border-radius: 4px;
+  transition: all 0.2s ease-in-out;
+  font-size: 100%;
+}
+
+.btn-dark:hover {
+  background: #f9bdbd;
+  color: #000;
+  border: 1px solid #000;
+}
+
+@import "home";
+@import "./responsive";
