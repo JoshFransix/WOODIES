@@ -43,11 +43,6 @@
   display: flex;
 }
 
-.logo,
-.nav-links {
-  display: flex;
-}
-
 .logo {
   flex: 2;
   // align-self: center;
@@ -77,37 +72,6 @@ nav {
 .nav-links a:hover {
   color: #daa520;
 }
-
-// .hamburger {
-//   width: 40px;
-//   cursor: pointer;
-// }
-
-// .nav-toggle {
-//   z-index: 1000;
-//   display: none;
-// }
-
-// .nav-toggle-label {
-//   position: absolute;
-//   background: #daa520;
-//   border-radius: 10px;
-//   top: 10px;
-//   right: 0%;
-//   margin-right: 1em;
-//   height: 40px;
-//   margin-top: 6px;
-//   z-index: 100;
-// }
-
-// .nav-toggle:checked ~ nav {
-//   transform: scale(1, 1);
-// }
-
-// .nav-toggle:checked ~ nav a {
-//   opacity: 1;
-//    transition: opacity 250ms ease-in-out 250ms;
-// }
 
 #showcase {
   position: relative;
