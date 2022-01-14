@@ -667,5 +667,26 @@ nav {
 .f-copy {
   text-align: center;
   color: #8d8d8d;
-  margin-top: 2.6rem;
+  margin-top: 0.6rem;
+}
+
+#footer .footer-text {
+  text-align: center;
+  margin: auto;
+  margin-top: 1.6rem;
+
+  width: 90%;
+  font-size: 15px;
+  font-family: "Space Mono";
+}
+
+#footer .footer-text a {
+  color: #8d8d8d;
+  text-align: center;
+  transition: all 0.3s ease-in-out;
+}
+
+#footer .footer-text a:hover {
+  color: #daa520;
+  transition: all 0.3s ease-in-out;
 }
